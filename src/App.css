@@ -1,38 +1,219 @@
 .App {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+/*
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
+  } */
+
+/*----------------------- my css ----------------------*/
+/* Header */
+:root {
+  --background-color:rgba(231, 219, 205, 1);
+  --darker-background-color: #243848;
+  --accent-color: rgb(247, 247, 250);
+  --text-color: rgba(79, 53, 48, 1);
+  --navbar-height: 60px;
+}
+* {
+  margin: 0;
+  padding: 0;
+ 
+   font-size: 22;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; 
+}
+
+.header {
+  height: var(--navbar-height);
+  background: var(--background-color);
+  display: flex;
+  justify-content: space-between;
+   align-items: center;
+  color: var(--text-color);
+  overflow:hidden;  
+}
+
+.header ul{
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  list-style: none;
+  color: var(--text-color)
+}
+
+.header li{  
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  color: var(--text-color);
+  padding: 5px;
+}
+
+.header ul a {
+    
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  text-align: left;
+  text-decoration: none;
+  color:var(--text-color);
+  padding-top: 10px;
+}
+
+.header li:hover {
+  background: var(--accent-color);
+}
+
+.navbar1 {
+  margin-right: 50px;
+  margin-bottom: 0;
+}
+
+.green{
+  font-family: "Kalam", sans-serif;
+  color: green;
+}
+
+.orange{
+  font-family: "Kalam", sans-serif;
+  color: orange;
+}
+
+.footer>p{
+  margin:0px;
+  font-size: 12px;
+}
+
+#companyName{
+  font-size: 40px;
+  color:rgba(112, 96, 94, 0.92);
+  font-family: "Kalam", sans-serif;
+  width: 100%;
+  margin-left: 80px;
+  text-align: left;
+}
+
+i{
+  padding-right: 5px;
+}
+ /* Logo-Name changed Size*/
+@media (max-width: 800px) {
+  
+#companyName{
+  font-size: 25px;
+  color:rgba(112, 96, 94, 0.92);
+  font-family: "Kalam", sans-serif;
+  width: 100%;
+  margin-left: 40px;
+  text-align: left;
   }
+}
+
+/* Navbar */
+.nav-links{
+  overflow:hidden;
+  background-color: white;
+  flex: flex;
+  flex-direction: row;
+  box-shadow:rgba(79, 53, 48, 1);
+  border-bottom: 1px solid blueviolet;
+}
+
+.nav-links li{
+  float:left;
+  display:block;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 16px; 
+}
+
+.nav-links li a{ 
+  color:rgba(79, 53, 48, 1); 
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.nav-links li:hover{
+  background-color: rgba(112, 96, 94, 0.92);
+  color: white !important;
+}
+
+.nav-links input[type=text] {
+  padding: 6px;
+  color:green;
+  font-size: 14px;
+  border: none;
+  border-radius: 12px;
+}
+
+.nav-links input::placeholder{
+  color:rgba(79, 53, 48, 1);
+}
+
+.search-container{
+  float: right;
+  margin-right: 50px;
+  border: 1px solid  rgba(79, 53, 48, 1);
+  cursor: pointer;
+  border-radius: 12px;
+}
+
+.nav-links .search-container button {
+  float: right;
+  margin: 8px 8px 0px 0px;
+  background: #ffffff;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;  
+}
+
+.fa{
+  font-size: 20px;
+  color:rgba(79, 53, 48, 1);
+}
+
+/* Footer */
+.footer {
+  background-color: rgba(112, 96, 94, 0.92);
+  color: rgba(255, 255, 255, 1);
+  text-align: center;
+  padding-bottom: 10px;   
+}
+
+.footer1line a{
+  text-decoration: none;
+  font-size:16px ;
+  color: rgba(255, 255, 255, 1); 
+}
+
+.footer1line{
+  
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+}
+
+.footer1line li{
+  width: 80%;
+  text-align: center;
+  position: relative;
+  height: min-content;
+  padding: 5px;
 }
